@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Perfil">
+
+
+    <LinearLayout style="@style/layout_vertical"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            style="@style/layout_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/fonte_padrao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/foot_perfil"></TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/foto">
+            </ImageView>
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/fonte_padrao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nome do Cidadão"
+            android:layout_marginTop="10dp"
+            ></TextView>
+
+        <TextView
+            style="@style/fonte_padrao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nascimento"
+            android:layout_marginTop="10dp"
+            ></TextView>
+        <TextView
+            style="@style/fonte_padrao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gênero"
+            android:layout_marginTop="10dp"
+            ></TextView>
+        <TextView
+            style="@style/fonte_padrao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:layout_marginTop="10dp"
+            ></TextView>
+        <TextView
+            style="@style/fonte_padrao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="telefone"
+            android:layout_marginTop="10dp"
+            ></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:id="@+id/bt_home"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/home" />
+
+            <ImageView
+                android:id="@+id/bt_rest"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/restautante" />
+
+            <ImageView
+                android:id="@+id/bt_perfil"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:src="@drawable/perfil" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                style="@style/fonte_padrao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/foot_inicio"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/fonte_padrao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/foot_rest"
+                android:textSize="16sp" />
+
+            <TextView
+                style="@style/fonte_padrao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/foot_perfil"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
