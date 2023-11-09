@@ -2,4 +2,15 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="red_1">#F22233</color>
+    <color name="red_2">#BF2A2A</color>
+    <color name="red_3">#C56060</color>
+    <color name="red_4">#FF0B0B</color>
+    <color name="laranja">#F28333</color>
+    <color name="preto">#262222</color>
+    <color name="cinza">#F2F2F2</color>
+    <color name="vd_claro">#8EC380</color>
+    <color name="amarelo">#EBEF78</color>
+    <color name="cinza_claro">#A2A29F</color>
+    <color name="cinza_busca">#995F5E61</color>
 </resources>

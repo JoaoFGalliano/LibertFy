@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LibertFy</string>
+
+    <!--Tela 01-->
+    <string name="boas_vindas">Welcome to LibertFY!</string>
+    <string name="texto_bv">We connect you with the best dishes and restaurants of Liberdade in
+        São Paulo - SP</string>
+
+    <!--Subtextos-->
+    <string name="categoria">Categories</string>
+    <string name="prn_ref">Main Meals</string>
+    <string name="prn_rest">Main Restaurants</string>
+    <string name="prn_rest_av">Top Rated Restaurants</string>
+    <string name="avaliacao">Comments and Reviews</string>
+    <string name="foot_rest">Restaurants</string>
+    <string name="foot_perfil">Profile</string>
+    <string name="ver_mais">see_more</string>
+    <string name="bv_perfil">Welcome</string>
+
+    <!--Pagina Principal-->
+    <string name="mapa">Track Your Commute</string>
+    <string name="menu">Browse by Category</string>
+
+    <!--Pagina de Cadastro-->
+    <string name="cadastro">Cadastre</string>
+    <string name="nome">User</string>
+    <string name="genero">Genre</string>
+    <string name="email">Email</string>
+    <string name="senha">Password</string>
+    <string name="cadastrar">Register</string>
+    <string name="ja_cadastrado">Have you already registered?</string>
+    <string name="faca_login">Log</string>
+
+    <!--Pagina de Login-->
+    <string name="login">Login</string>
+
+    <string name="logar">Log In</string>
+    <string name="nao_cadastrado">Don\'t have an account?</string>
+    <string name="cadastre_se">Sign Up</string>
+    <string name="lembrar_me">Remeber-me</string>
+
+
+    <!--Botões-->
+    <string name="btn_next">Advance</string>
+    <string name="btn_back">Back</string>
+
+    <!--Caixa de Pesquisa-->
+    <string name="cx_busca">What\'s the name of your hunger?</string>
+
+    <!--    Next 01-->
+    <string name="nxt_1">Find an Asian restaurant...</string>
+    <string name="nxt_2">...Try...</string>
+    <string name="nxt_3">Give it a grade!</string>
+    <string name="not_found">Sorry, your search returned no results</string>
+
+
+    <!--Next 03-->
+    <string name="comecar">Começar</string>
+
+
+    <!--Especialidades-->
+    <string name="cul_jp">Japanese Cuisine</string>
+    <string name="cul_ch">Chinese Cuisine</string>
+    <string name="foot_inicio">Home</string>
+
+    <string name="cul_co">Korean Cuisine</string>
+</resources>

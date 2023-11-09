@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Welcome">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/foto2" />
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            style="@style/fonte_padrao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="160dp"
+
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/boas_vindas"
+            android:textColor="@color/red_4"
+            android:textSize="40sp">
+        </TextView>
+
+        <TextView
+            style="@style/fonte_padrao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="210dp"
+            android:text="@string/texto_bv"
+            android:textColor="@color/white"
+            android:textSize="19sp">
+        </TextView>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/bt_avancar1"
+            style="@style/btn"
+            android:fontFamily="@font/poppins_reg"
+            android:text="@string/btn_next" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

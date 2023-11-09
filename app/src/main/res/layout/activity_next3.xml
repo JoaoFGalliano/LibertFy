@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Next3">
+
+
+    <LinearLayout
+        style="@style/layout_vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            style="@style/fonte_padrao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/nxt_3">
+        </TextView>
+
+        <LinearLayout style="@style/layout_vertical">
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="470dp"
+                android:src="@drawable/avalie">
+
+            </ImageView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_comecar"
+            style="@style/btn"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/poppins_reg"
+            android:text="@string/comecar">
+        </Button>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
