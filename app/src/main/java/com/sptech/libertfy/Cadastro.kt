@@ -13,7 +13,6 @@ import retrofit2.Call
 import retrofit2.Response
 
 
-
 class Cadastro : AppCompatActivity() {
 
     val binding by lazy {
@@ -43,9 +42,10 @@ class Cadastro : AppCompatActivity() {
 
         // Crie sua carga útil "raw" como uma String
         val jsonPayload =
-            "{\"nome\": \"${binding.etUsuario.text.toString()}\",\n" +
-//                    "  \"genero\": \"${binding.etgenero.text.toString()}\",\n" +
-//                    "  \"email\": \"${binding.etEmail.text.toString()}\",\n" +
+                     "{\"nome\": \"${binding.etUsuario.text.toString()}\",\n" +
+                    "  \"genero\": \"${binding.etGenero.text.toString()}\",\n" +
+                    "  \"data\": \"${binding.etData.text.toString()}\",\n" +
+                    "  \"email\": \"${binding.etEmail.text.toString()}\",\n" +
                     "  \"senha\": \"${binding.etSenha.text.toString()}\"}"
 
         // Converta a String em um RequestBody
@@ -66,7 +66,7 @@ class Cadastro : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<Usuario>, t: Throwable) {
-                println("Deu Ruim")
+                println("Deu Ruim ${t.message}")
             }
         })
     }

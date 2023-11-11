@@ -16,11 +16,10 @@ class Next3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-//
-//        binding.btComecar.setOnClickListener {
-//            val irParaCadastro = Intent(this, Cadastro::class.java)
-//            startActivity(irParaCadastro)
-//        }
 
+        binding.btComecar.setOnClickListener {
+            val irParaCadastro = Intent(this, Cadastro::class.java)
+            startActivity(irParaCadastro)
+        }
     }
 }

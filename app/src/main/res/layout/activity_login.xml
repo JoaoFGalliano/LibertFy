@@ -54,11 +54,11 @@
                 android:src="@drawable/nome"></ImageView>
 
             <EditText
+                android:id="@+id/etUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_margin="10dp"
-                android:hint="@string/nome"
-                android:inputType="number"></EditText>
+                android:hint="@string/nome"></EditText>
 
         </LinearLayout>
 
@@ -75,6 +75,7 @@
                 android:src="@drawable/password"></ImageView>
 
             <EditText
+                android:id="@+id/etSenha"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_margin="10dp"

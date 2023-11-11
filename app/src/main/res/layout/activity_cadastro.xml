@@ -74,11 +74,32 @@
             </ImageView>
 
             <EditText
-                android:id="@+id/etgenero"
+                android:id="@+id/etGenero"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:hint="@string/genero"
+                android:inputType="text"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/calendar">
+            </ImageView>
+
+            <EditText
+                android:id="@+id/etData"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:hint="@string/data"
                 android:inputType="text"></EditText>
         </LinearLayout>
 

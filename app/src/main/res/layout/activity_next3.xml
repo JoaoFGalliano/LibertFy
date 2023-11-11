@@ -15,7 +15,7 @@
             style="@style/fonte_padrao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="35dp"
             android:layout_marginBottom="30dp"
             android:text="@string/nxt_3">
         </TextView>
@@ -23,18 +23,16 @@
         <LinearLayout style="@style/layout_vertical">
 
             <ImageView
-
                 android:layout_width="match_parent"
                 android:layout_height="470dp"
                 android:src="@drawable/avalie">
-
             </ImageView>
         </LinearLayout>
 
         <Button
             android:id="@+id/bt_comecar"
             style="@style/btn"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="13dp"
             android:fontFamily="@font/poppins_reg"
             android:text="@string/comecar">
         </Button>

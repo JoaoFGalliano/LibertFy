@@ -14,7 +14,8 @@
             style="@style/fonte_padrao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/nxt_2">
 
         </TextView>
@@ -24,7 +25,7 @@
             <ImageView
                 android:layout_margin="30dp"
                 android:layout_width="match_parent"
-                android:layout_height="440dp"
+                android:layout_height="430dp"
                 android:src="@drawable/experimente">
 
             </ImageView>
@@ -33,6 +34,7 @@
         <Button
             android:id="@+id/bt_avancar3"
             style="@style/btn"
+            android:layout_marginTop="12dp"
             android:text="@string/btn_next"
             android:fontFamily="@font/poppins_reg"
             >

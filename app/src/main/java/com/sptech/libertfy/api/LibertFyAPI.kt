@@ -11,9 +11,9 @@ import retrofit2.http.Path
 interface LibertFyAPI {
 
     @GET("/usuarios")
-
     fun get(): retrofit2.Call<List<Usuario>>
-
+    @POST("/usuarios/login")
+    fun login(@Body requestBody: RequestBody): Call<Usuario>
     @GET("/usuarios/{id}")
     fun get(@Path("id") id: Int): retrofit2.Call<Usuario>
 

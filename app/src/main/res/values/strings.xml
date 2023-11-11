@@ -26,6 +26,7 @@
     <string name="cadastro">Cadastro</string>
     <string name="nome">Usuário</string>
     <string name="genero">Gênero</string>
+    <string name="data">Data de Nascimento</string>
     <string name="email">Email</string>
     <string name="senha">Senha</string>
     <string name="cadastrar">Cadastrar</string>

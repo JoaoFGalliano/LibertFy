@@ -32,7 +32,7 @@
         <Button
             android:id="@+id/bt_avancar2"
             style="@style/btn"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="35dp"
             android:fontFamily="@font/poppins_reg"
             android:text="@string/btn_next"></Button>
 

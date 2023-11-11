@@ -5,7 +5,6 @@ import android.os.Bundle
 import com.sptech.libertfy.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
     val binding by lazy {
 
         ActivityMainBinding.inflate(layoutInflater)

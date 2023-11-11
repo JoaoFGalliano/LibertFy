@@ -8,7 +8,7 @@ object RetrofitClient {
 
     var retrofit: Retrofit? = null
 
-    private const val BASE_URL = "http://ec2-23-22-61-175.compute-1.amazonaws.com:8080/"
+    private const val BASE_URL = "https://ec2-23-22-61-175.compute-1.amazonaws.com:8443"
 
     fun getClient(): Retrofit {
         if (retrofit == null) {
