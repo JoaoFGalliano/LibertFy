@@ -1,4 +1,4 @@
-package com.sptech.libertfy.api
+package com.sptech.libertfy.api.model
 
 data class Restaurante(
     val id: Int,

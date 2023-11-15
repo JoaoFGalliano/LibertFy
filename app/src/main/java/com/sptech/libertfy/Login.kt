@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sptech.libertfy.api.LibertFyAPI
-import com.sptech.libertfy.api.RetrofitClient
-import com.sptech.libertfy.api.Usuario
+import com.sptech.libertfy.api.model.Usuario
 import com.sptech.libertfy.databinding.ActivityLoginBinding
+import com.sptech.libertfy.sessao.Sessao
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
@@ -35,8 +35,7 @@ class Login : AppCompatActivity() {
     }
 
     private fun logar() {
-        val retrofitClient = RetrofitClient.getClient()
-        val endpoint = retrofitClient.create(LibertFyAPI::class.java)
+        val endpoint = LibertFyAPI.criar()
 
         val jsonPayload =
             "{\"email\": \"${binding.etUsuario.text.toString()}\",\n" +
@@ -52,6 +51,7 @@ class Login : AppCompatActivity() {
                 when {
                     response.isSuccessful -> {
                         print("Deu Bom")
+                        Sessao.usuario = response.body()!!
                         val intent = Intent(this@Login, MainActivity::class.java)
                         startActivity(intent)
                     }

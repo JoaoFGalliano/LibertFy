@@ -3,6 +3,8 @@ package com.sptech.libertfy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.sptech.libertfy.api.LibertFyAPI
+import com.sptech.libertfy.api.RetrofitClient
 import com.sptech.libertfy.databinding.ActivityRestaurantesBinding
 
 class Restaurantes : AppCompatActivity() {
@@ -26,4 +28,10 @@ class Restaurantes : AppCompatActivity() {
             startActivity(irParaPerfil)
         }
     }
+
+    private fun buscarRestaurantes(){
+        val retrofitClient = RetrofitClient.getClient()
+        val endpoint = retrofitClient.create(LibertFyAPI::class.java)
+    }
+
 }

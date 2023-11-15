@@ -4,9 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.sptech.libertfy.api.LibertFyAPI
-import com.sptech.libertfy.api.RetrofitClient
-import com.sptech.libertfy.api.Usuario
+import com.sptech.libertfy.api.model.Usuario
 import com.sptech.libertfy.databinding.ActivityCadastroBinding
+import com.sptech.libertfy.sessao.Sessao
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
@@ -37,8 +37,7 @@ class Cadastro : AppCompatActivity() {
     }
 
     private fun cadastrar() {
-        val retrofitClient = RetrofitClient.getClient()
-        val endpoint = retrofitClient.create(LibertFyAPI::class.java)
+        val endpoint = LibertFyAPI.criar()
 
         // Crie sua carga útil "raw" como uma String
         val jsonPayload =
@@ -50,6 +49,8 @@ class Cadastro : AppCompatActivity() {
 
         // Converta a String em um RequestBody
         val requestBody = jsonPayload.toRequestBody("application/json".toMediaTypeOrNull())
+
+        endpoint.criarComentario("oijioiou", Sessao.token)
 
         // Faça a chamada à API passando o RequestBody
         val callback = endpoint.post(requestBody)
