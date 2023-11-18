@@ -3,7 +3,6 @@ package com.sptech.libertfy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.sptech.libertfy.api.LibertFyAPI
 import com.sptech.libertfy.databinding.ActivityCategoriasBinding
 
 class Categorias : AppCompatActivity() {
