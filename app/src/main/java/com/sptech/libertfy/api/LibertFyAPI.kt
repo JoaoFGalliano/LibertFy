@@ -27,7 +27,7 @@ interface LibertFyAPI {
     fun get(@Path("id") id: Int): Call<Usuario>
 
     @POST("/usuarios/criar")
-    fun post(@Body requestBody: RequestBody): Call<Usuario>
+    fun post(@Body requestBody: Usuario): Call<Void>
 
 //    @DELETE("/usuarios/{id}")
 //    fun delete(@Path("id") id: Int): Call<Void>
@@ -48,7 +48,7 @@ interface LibertFyAPI {
     fun criarComentario(@Body comentario:String, @Header("authentication") authentication:String): Call<Void>
 
     companion object {
-        var BASE_URL = "https://ec2-23-22-61-175.compute-1.amazonaws.com:8443"
+        var BASE_URL = "http://ec2-23-22-61-175.compute-1.amazonaws.com:8081"
         fun criar():LibertFyAPI {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

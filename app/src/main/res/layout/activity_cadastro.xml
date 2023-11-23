@@ -57,6 +57,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
                 android:hint="@string/nome"
+                android:text="Joao"
                 android:inputType="text"></EditText>
         </LinearLayout>
 
@@ -78,6 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
+                android:text="Joao"
                 android:hint="@string/genero"
                 android:inputType="text"></EditText>
         </LinearLayout>
@@ -99,6 +101,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
+                android:text="1980-09-01"
                 android:hint="@string/data"
                 android:inputType="text"></EditText>
         </LinearLayout>
@@ -118,6 +121,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
+                android:text="gallianojoao@gmail.com"
                 android:hint="@string/email"
                 android:inputType="text"></EditText>
         </LinearLayout>
@@ -137,6 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
+                android:text="Admin@123Abc"
                 android:hint="@string/senha"
                 android:inputType="textPassword"></EditText>
         </LinearLayout>

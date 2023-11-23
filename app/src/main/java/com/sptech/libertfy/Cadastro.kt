@@ -1,8 +1,10 @@
 package com.sptech.libertfy
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.annotation.RequiresApi
 import com.sptech.libertfy.api.LibertFyAPI
 import com.sptech.libertfy.api.model.Usuario
 import com.sptech.libertfy.databinding.ActivityCadastroBinding
@@ -11,6 +13,7 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Call
 import retrofit2.Response
+import java.time.LocalDate
 
 
 class Cadastro : AppCompatActivity() {
@@ -36,11 +39,14 @@ class Cadastro : AppCompatActivity() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun cadastrar() {
         val endpoint = LibertFyAPI.criar()
 
         // Crie sua carga útil "raw" como uma String
-        val jsonPayload =
+        val jsonPayload = """
+            
+        """.trimIndent()
                      "{\"nome\": \"${binding.etUsuario.text.toString()}\",\n" +
                     "  \"genero\": \"${binding.etGenero.text.toString()}\",\n" +
                     "  \"data\": \"${binding.etData.text.toString()}\",\n" +
@@ -50,13 +56,21 @@ class Cadastro : AppCompatActivity() {
         // Converta a String em um RequestBody
         val requestBody = jsonPayload.toRequestBody("application/json".toMediaTypeOrNull())
 
-        endpoint.criarComentario("oijioiou", Sessao.token)
+       // endpoint.criarComentario("oijioiou", Sessao.token)
 
         // Faça a chamada à API passando o RequestBody
-        val callback = endpoint.post(requestBody)
-        callback.enqueue(object : retrofit2.Callback<Usuario> {
+        val usuario = Usuario(
+            null,
+            binding.etUsuario.text.toString(),
+            binding.etGenero.text.toString(),
+            binding.etData.text.toString(),
+            binding.etEmail.text.toString(),
+            binding.etSenha.text.toString()
+        )
+        val callback = endpoint.post(usuario)
+        callback.enqueue(object : retrofit2.Callback<Void> {
 
-            override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
+            override fun onResponse(call: Call<Void>, response: Response<Void>) {
                 when {
                     response.isSuccessful -> {
                         print("Deu Bom")
@@ -66,7 +80,7 @@ class Cadastro : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<Usuario>, t: Throwable) {
+            override fun onFailure(call: Call<Void>, t: Throwable) {
                 println("Deu Ruim ${t.message}")
             }
         })

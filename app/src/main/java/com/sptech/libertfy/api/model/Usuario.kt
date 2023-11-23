@@ -1,7 +1,7 @@
 package com.sptech.libertfy.api.model
 
 data class Usuario(
-    val id: Int,
+    val id: Int? = null,
 
     val nome: String,
 
