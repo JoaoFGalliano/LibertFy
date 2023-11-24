@@ -3,6 +3,9 @@ package com.sptech.libertfy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import com.google.android.material.textfield.TextInputEditText
 import com.sptech.libertfy.api.LibertFyAPI
 import com.sptech.libertfy.api.model.Usuario
 import com.sptech.libertfy.databinding.ActivityLoginBinding
@@ -32,6 +35,12 @@ class Login : AppCompatActivity() {
             val irParaCadastro = Intent(this, Cadastro::class.java)
             startActivity(irParaCadastro)
         }
+
+        val emailInput = findViewById<EditText>(R.id.etUsuario)
+        val passwordInput = findViewById<EditText>(R.id.etSenha)
+        val loginButton = findViewById<Button>(R.id.btLogar)
+
+
     }
 
     private fun logar() {
