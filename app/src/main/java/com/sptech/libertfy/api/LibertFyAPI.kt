@@ -48,7 +48,8 @@ interface LibertFyAPI {
     fun criarComentario(@Body comentario:String, @Header("authentication") authentication:String): Call<Void>
 
     companion object {
-        var BASE_URL = "http://ec2-23-22-61-175.compute-1.amazonaws.com:8081"
+        var BASE_URL = "http://192.168.0.100:8080/"
+//        var BASE_URL = "http://ec2-23-22-61-175.compute-1.amazonaws.com:8081"
         fun criar():LibertFyAPI {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())

@@ -58,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_margin="10dp"
+                android:text="gallianojoao@gmail.com"
                 android:hint="@string/nome"></EditText>
 
         </LinearLayout>
@@ -80,6 +81,7 @@
                 android:layout_height="55dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:text="Admin@123Abc"
                 android:hint="@string/senha"></EditText>
         </LinearLayout>
 

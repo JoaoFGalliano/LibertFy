@@ -74,7 +74,7 @@ class Cadastro : AppCompatActivity() {
                 when {
                     response.isSuccessful -> {
                         print("Deu Bom")
-                        val intent = Intent(this@Cadastro, MainActivity::class.java)
+                        val intent = Intent(this@Cadastro, Login::class.java)
                         startActivity(intent)
                     }
                 }
