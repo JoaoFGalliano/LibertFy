@@ -1,5 +1,6 @@
 package com.sptech.libertfy.api
 
+import com.sptech.libertfy.Perfil
 import com.sptech.libertfy.api.model.Restaurante
 import com.sptech.libertfy.api.model.Usuario
 import okhttp3.RequestBody
@@ -47,9 +48,14 @@ interface LibertFyAPI {
     @POST("/comentarios")
     fun criarComentario(@Body comentario:String, @Header("authentication") authentication:String): Call<Void>
 
+    interface ApiService {
+        @GET("/perfil")
+        fun getPerfil(): Call<Usuario>
+    }
+
     companion object {
-        var BASE_URL = "http://192.168.0.100:8080/"
-//        var BASE_URL = "http://ec2-23-22-61-175.compute-1.amazonaws.com:8081"
+        // var BASE_URL = "http://192.168.0.100:8080/"
+        var BASE_URL = "http://ec2-23-22-61-175.compute-1.amazonaws.com:8081"
         fun criar():LibertFyAPI {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
@@ -57,5 +63,25 @@ interface LibertFyAPI {
                 .build()
             return retrofit.create(LibertFyAPI::class.java)
         }
+
+        fun login(): LibertFyAPI {
+            val retrofit = Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(BASE_URL)
+                .build()
+            return retrofit.create(LibertFyAPI::class.java)
+        }
+
+        fun criarComentario(): LibertFyAPI {
+            val retrofit = Retrofit.Builder()
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(BASE_URL)
+                .build()
+            return retrofit.create(LibertFyAPI::class.java)
+        }
+
+
+
+
     }
 }

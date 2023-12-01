@@ -12,7 +12,9 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import com.sptech.libertfy.api.LibertFyAPI
+import com.sptech.libertfy.api.model.Usuario
 import com.sptech.libertfy.databinding.ActivityLoginBinding
+import com.sptech.libertfy.sessao.Sessao
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 
@@ -47,35 +49,38 @@ class Login : AppCompatActivity() {
         }
     }
     fun logar() {
-        val endpoint = LibertFyAPI.criar()
+        val endpoint = LibertFyAPI.login()
         val jsonPayload =
             "{\"email\": \"${binding.etUsuario.text.toString()}\",\n" +
                     "  \"senha\": \"${binding.etSenha.text.toString()}\"}"
 
         val requestBody = jsonPayload.toRequestBody("application/json".toMediaTypeOrNull())
 
-//        val callback = endpoint.login(requestBody)
-//        callback.enqueue(object : retrofit2.Callback<Usuario> {
+        val callback = endpoint.login(requestBody)
+        callback.enqueue(object : retrofit2.Callback<Usuario> {
 
 
-//            override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
-//                when {
-//                    response.isSuccessful -> {
-//                        print("Deu Bom")
-//                        Sessao.usuario = response.body()!!
-////                        Sessao.token = response.body()!!
-//
-//                        val intent = Intent(this@Login, MainActivity::class.java)
-//                        startActivity(intent)
-//                    }
-//                    // Faça algo com os dados do usuário
-//                }
-//            }
+            override fun onResponse(call: Call<Usuario>, response: Response<Usuario>) {
+                when {
+                    response.isSuccessful -> {
+                        print("Deu Bom")
+                        Sessao.usuario = response.body()!!
+//                        Sessao.token = response.body()!!
 
-//            override fun onFailure(call: Call<Usuario>, t: Throwable) {
-//                println("Deu Ruim ${t.message}")
-//            }
-//        })
+                        val intent = Intent(this@Login, MainActivity::class.java)
+                        startActivity(intent)
+                    }
+                    // Faça algo com os dados do usuário
+                    else -> {
+                        print("Deu ruim ${response.message()}")
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<Usuario>, t: Throwable) {
+                println("Deu Ruim ${t.message}")
+            }
+        })
     }
 }
 

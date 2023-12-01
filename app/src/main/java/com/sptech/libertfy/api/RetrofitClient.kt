@@ -23,3 +23,18 @@
 //        return retrofit!!
 //    }
 //}
+
+
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+object RetrofitInstance {
+    private const val BASE_URL = "http://ec2-23-22-61-175.compute-1.amazonaws.com:8081"
+
+    fun getRetrofitInstance(): Retrofit {
+        return Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+}
