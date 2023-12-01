@@ -6,8 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".Restaurantes">
 
-    <LinearLayout style="@style/layout_vertical"
-        tools:ignore="MissingConstraints">
+    <LinearLayout
+        style="@style/layout_vertical"
+        tools:ignore="MissingConstraints"
+        >
 
         <LinearLayout
             style="@style/layout_vertical"
@@ -15,41 +17,84 @@
 
             <TextView
                 style="@style/fonte_padrao"
+                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:text="@string/foot_rest"></TextView>
         </LinearLayout>
 
+    <LinearLayout style="@style/layout_vertical">
+
+        <ImageView
+            android:id="@+id/etRest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ambiente"></ImageView>
+
+
+        <TextView
+            android:id="@+id/tvRest"
+            style="@style/fonte_padrao"
+            android:textSize="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Nome Restaurante"></TextView>
+
+        <TextView
+            style="@style/fonte_padrao"
+            android:textSize="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Deixe Um Comentário">
+
+        </TextView>
+    </LinearLayout>
 
         <LinearLayout
-            android:layout_width="360dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="30dp">
+            >
 
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="10dp"
-                android:layout_weight="0.5"
-                android:src="@drawable/busca" />
 
             <EditText
+                android:layout_marginLeft="20dp"
+                android:id="@+id/etComent"
                 android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginRight="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:hint="@string/cx_busca"
-                android:inputType="text"></EditText>
+                android:fontFamily="@font/poppins_reg"
+                android:hint="Escreva um comentário"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/icOk"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/ok"></ImageView>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_reg"
+            android:text="mostrar comentário"
+            android:textSize="20sp"
+            android:visibility="visible">
+        </TextView>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="460dp"
+            android:layout_marginTop="70dp"
             android:layout_marginBottom="5dp">
 
             <ImageView
