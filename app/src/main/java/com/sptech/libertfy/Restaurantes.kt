@@ -27,6 +27,12 @@ class Restaurantes : AppCompatActivity() {
             val irParaPerfil = Intent(this, Perfil::class.java)
             startActivity(irParaPerfil)
         }
+
+        binding.rest1.setOnClickListener {
+            val irParaComentarios = Intent(this, Comentarios::class.java)
+            startActivity(irParaComentarios)
+        }
+
     }
 
 //    private fun buscarRestaurantes(){

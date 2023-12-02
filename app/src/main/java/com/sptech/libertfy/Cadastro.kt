@@ -46,13 +46,13 @@ class Cadastro : AppCompatActivity() {
         // Crie sua carga útil "raw" como uma String
         val jsonPayload = """
             
-        """.trimIndent()
+        
                      "{\"nome\": \"${binding.etUsuario.text.toString()}\",\n" +
                     "  \"genero\": \"${binding.etGenero.text.toString()}\",\n" +
                     "  \"data\": \"${binding.etData.text.toString()}\",\n" +
                     "  \"email\": \"${binding.etEmail.text.toString()}\",\n" +
                     "  \"senha\": \"${binding.etSenha.text.toString()}\"}"
-
+        """.trimIndent()
         // Converta a String em um RequestBody
         val requestBody = jsonPayload.toRequestBody("application/json".toMediaTypeOrNull())
 

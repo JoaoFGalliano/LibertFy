@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         ActivityMainBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -19,11 +20,15 @@ class MainActivity : AppCompatActivity() {
         val token = "lweijfiojeri"
         Sessao.token = token
 
-//        val verPerfil = findViewById<TextView>(R.id.ver_perfil)
-//
-//        verPerfil.setOnClickListener {
-//            val intent = Intent(this, Perfil::class.java)
-//            startActivity(intent)
-//        }
+
+        binding.btRest.setOnClickListener {
+            val irParaRestaurantes = Intent(this, Restaurantes::class.java)
+            startActivity(irParaRestaurantes)
+        }
+
+        binding.btPerfil.setOnClickListener {
+            val irParaPerfil = Intent(this, Perfil::class.java)
+            startActivity(irParaPerfil)
+        }
     }
 }

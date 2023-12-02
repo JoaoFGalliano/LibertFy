@@ -64,6 +64,8 @@
     <string name="cul_jp">Japanese Cuisine</string>
     <string name="cul_ch">Chinese Cuisine</string>
     <string name="foot_inicio">Home</string>
-
     <string name="cul_co">Korean Cuisine</string>
+
+    <string name="com_tanka">TANKA is different from most restaurants you know.We offer a large all-you-can-eat buffet. Eat whatever you want, without limits!
+    </string>
 </resources>

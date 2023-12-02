@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,93 +7,93 @@
 
     <LinearLayout
         style="@style/layout_vertical"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        >
+
+        <LinearLayout
+            style="@style/layout_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/fonte_padrao"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tanka"></TextView>
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout_vertical">
+
+            <ImageView
+                android:id="@+id/etRest"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/tanka"></ImageView>
+
+
+            <TextView
+                android:id="@+id/tvRest"
+                android:fontFamily="@font/poppins_reg"
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="textStart"
+                android:text="@string/com_tanka"></TextView>
+
+            <TextView
+                style="@style/fonte_padrao"
+                android:textSize="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/foot_rest">
+                android:text="Deixe Um Comentário">
+
             </TextView>
+        </LinearLayout>
 
         <LinearLayout
-            style="@style/layout_vertical">
-            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+            <EditText
+                android:layout_marginLeft="20dp"
+                android:id="@+id/etComent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:id="@+id/tanka"
-                android:background="@color/amarelo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="70dp"
-                   android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/salao_tanka"></ImageView>
-                <TextView
-                    style="@style/fonte_padrao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="Tanka">
-                </TextView>
-            </LinearLayout>
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_reg"
+                android:hint="Escreva um comentário"
+                android:textAlignment="center" />
 
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:id="@+id/tanka2"
-                android:background="@color/amarelo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/mugui">
-                </ImageView>
-
-                <TextView
-                    style="@style/fonte_padrao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="Mugui">
-                </TextView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginTop="20dp"
-                android:id="@+id/tanka3"
-                android:background="@color/amarelo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="100dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/tako"></ImageView>
-                <TextView
-                    style="@style/fonte_padrao"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="Tako">
-                </TextView>
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/icOk"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:src="@drawable/ok"></ImageView>
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvComentario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_reg"
+            android:textSize="20sp"
+            android:visibility="invisible">
+        </TextView>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="70dp"
             android:layout_marginBottom="5dp">
 
             <ImageView
@@ -148,8 +147,10 @@
                 android:layout_weight="1"
                 android:text="@string/foot_perfil"
                 android:textSize="16sp" />
+
         </LinearLayout>
     </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
