@@ -46,7 +46,7 @@ interface LibertFyAPI {
 
     //Categorias
     @POST("/comentarios")
-    fun criarComentario(@Body comentario:String, @Header("authentication") authentication:String): Call<Void>
+    fun criarComentario(@Body requestBody: RequestBody, @Header("authentication") authentication:String): Call<Void>
 
     interface ApiService {
         @GET("/perfil")

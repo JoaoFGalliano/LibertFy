@@ -3,6 +3,7 @@ package com.sptech.libertfy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import com.sptech.libertfy.api.LibertFyAPI
 
 import com.sptech.libertfy.databinding.ActivityRestaurantesBinding
@@ -28,9 +29,17 @@ class Restaurantes : AppCompatActivity() {
             startActivity(irParaPerfil)
         }
 
-        binding.rest1.setOnClickListener {
-            val irParaComentarios = Intent(this, Comentarios::class.java)
-            startActivity(irParaComentarios)
+//        binding.rest1.setOnClickListener {
+//            val irParaComentarios = Intent(this, Comentarios::class.java)
+//            startActivity(irParaComentarios)
+//        }
+
+        val irTanka = findViewById<LinearLayout>(R.id.tanka)
+
+        irTanka.setOnClickListener {
+            // Aqui você pode iniciar a atividade do restaurante
+            val intent = Intent(this, Comentarios::class.java)
+            startActivity(intent)
         }
 
     }
