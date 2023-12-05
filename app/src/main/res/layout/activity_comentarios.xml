@@ -7,19 +7,20 @@
 
     <LinearLayout
         style="@style/layout_vertical"
-        tools:ignore="MissingConstraints"
-        >
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             style="@style/layout_vertical"
+            android:background="@color/red_2"
             android:orientation="horizontal">
 
             <TextView
                 style="@style/fonte_padrao"
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tanka"></TextView>
+                android:layout_marginTop="5dp"
+                android:text="Tanka"
+                android:textColor="@color/white"></TextView>
         </LinearLayout>
 
         <LinearLayout style="@style/layout_vertical">
@@ -27,60 +28,80 @@
             <ImageView
                 android:id="@+id/etRest"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="150dp"
                 android:layout_marginTop="20dp"
                 android:src="@drawable/tanka"></ImageView>
 
 
             <TextView
                 android:id="@+id/tvRest"
-                android:fontFamily="@font/poppins_reg"
-                android:textSize="15sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_reg"
+                android:text="@string/com_tanka"
                 android:textAlignment="textStart"
-                android:text="@string/com_tanka"></TextView>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
-    <ImageView
-        android:id="@+id/imPrato1"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:src="@drawable/sushi">
-    </ImageView>
-    <ImageView
-        android:id="@+id/imPrato2"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
-        android:src="@drawable/lagostim">
-    </ImageView>
-</LinearLayout>
+                android:textSize="15sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sushi"
+                    android:textAlignment="center"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lagostim"
+                    android:textAlignment="center"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imPrato1"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sushi"></ImageView>
+
+                <ImageView
+                    android:id="@+id/imPrato2"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/lagostim"></ImageView>
+            </LinearLayout>
 
             <TextView
                 style="@style/fonte_padrao"
-                android:textSize="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Deixe Um Comentário">
+                android:text="Deixe Um Comentário"
+                android:textSize="25dp">
 
             </TextView>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
+            android:layout_height="wrap_content">
 
 
             <EditText
-                android:layout_marginLeft="20dp"
                 android:id="@+id/etComent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/poppins_reg"
@@ -99,14 +120,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <TextView
                 android:id="@+id/tvComentarioEnviado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 android:fontFamily="@font/poppins_reg"
-                android:textSize="20sp"
                 android:textColor="@android:color/holo_green_dark"
+                android:textSize="20sp"
                 android:visibility="invisible" />
         </LinearLayout>
 
@@ -117,19 +139,20 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_reg"
             android:textSize="20sp"
-            android:visibility="invisible">
-        </TextView>
+            android:visibility="invisible"></TextView>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp">
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:background="@color/red_2">
 
             <ImageView
                 android:id="@+id/bt_home"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/home" />
 
@@ -144,22 +167,24 @@
                 android:id="@+id/bt_perfil"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/perfil" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
+            android:layout_height="match_parent"
+            android:background="red_2">
 
             <TextView
                 style="@style/fonte_padrao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/red_2"
                 android:text="@string/foot_inicio"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -167,7 +192,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/red_2"
                 android:text="@string/foot_rest"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -175,7 +202,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="@color/red_2"
                 android:text="@string/foot_perfil"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
         </LinearLayout>

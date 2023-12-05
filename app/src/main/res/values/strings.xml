@@ -16,11 +16,16 @@
     <string name="foot_rest">Restaurantes</string>
     <string name="foot_perfil">Perfil</string>
     <string name="ver_mais">ver_mais</string>
-    <string name="bv_perfil">Bem-vindo(a)</string>
+    <string name="bv_perfil">Bem-vindo(a), Joao</string>
 
     <!--Pagina Principal-->
     <string name="mapa">Acompanhe seu Trajeto</string>
     <string name="menu">Busque por Categoria</string>
+    <string name="intro">Libertfy é um projeto dedicado a promover a rica gastronomia asiática
+        presente no bairro da Liberdade, em São Paulo. Como a maior comunidade japonesa fora do
+        Japão, a cidade atrai turistas e visitantes interessados nessa cultura vibrante.
+        A proposta é indicar os melhores restaurantes asiáticos do bairro, incluindo opções
+        japonesas, chinesas, coreanas, taiwanesas e tailandesas.</string>
 
     <!--Pagina de Cadastro-->
     <string name="cadastro">Cadastro</string>

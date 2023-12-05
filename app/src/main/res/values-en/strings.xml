@@ -21,6 +21,11 @@
     <!--Pagina Principal-->
     <string name="mapa">Track Your Commute</string>
     <string name="menu">Browse by Category</string>
+    <string name="intro">Libertfy is a project dedicated to promoting rich Asian cuisine
+        present in the Liberdade neighborhood, in São Paulo. As the largest Japanese community
+        outside of Japan, the city attracts tourists and visitors interested in this vibrant culture.
+        The proposal is to indicate the best Asian restaurants in the neighborhood, including options
+        Japanese, Chinese, Korean, Taiwanese and Thai.</string>
 
     <!--Pagina de Cadastro-->
     <string name="cadastro">Cadastre</string>

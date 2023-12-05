@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout style="@style/layout_vertical"
+    <LinearLayout
+        style="@style/layout_vertical"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="0dp"
+            android:background="@color/red_2">
 
             <ImageView
                 android:layout_width="1dp"
@@ -31,7 +33,8 @@
                 android:layout_weight="2"
                 android:text="@string/bv_perfil"
                 android:textAlignment="gravity"
-                android:textSize="16sp"/>
+                android:textColor="@color/white"
+                android:textSize="17sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -41,69 +44,81 @@
             android:layout_marginTop="30dp"
             android:background="@color/white">
 
-            <ImageView
-                android:layout_width="10dp"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginRight="10dp"
-                android:layout_weight="0.5"
-                android:src="@drawable/busca" />
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
-                android:layout_marginRight="60dp"
-                android:layout_weight="1"
-                android:hint="@string/cx_busca"
-                android:inputType="text"></EditText>
         </LinearLayout>
 
-        <LinearLayout
-            style="@style/layout_vertical">
+        <LinearLayout style="@style/layout_vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/poppins_reg"
+                    android:text="@string/intro"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"></TextView>
+
+            </LinearLayout>
 
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/amarelo"
-                android:text="@string/mapa"
                 style="@style/fonte_padrao"
-                android:textSize="20sp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                ></TextView>
-
-            <ImageView
-                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/location">
+                android:layout_marginBottom="10dp"
+                android:text="Principais Pratos"
+                android:textSize="20sp"></TextView>
 
-            </ImageView>
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/menu"
-                style="@style/fonte_padrao"
-                android:textSize="20sp"
-                android:background="@color/red_2"
-                android:textColor="@color/white"
-                ></TextView>
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/img_menu"
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sushi"
+                    android:textAlignment="center"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lagostim"
+                    android:textAlignment="center"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:src="@drawable/menu"
-                ></ImageView>
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imPrato1"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/sushi"></ImageView>
+
+                <ImageView
+                    android:id="@+id/imPrato2"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/lagostim"></ImageView>
+            </LinearLayout>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:layout_marginBottom="5dp">
+            android:layout_marginTop="150dp"
+            android:background="@color/red_2">
 
             <ImageView
                 android:id="@+id/bt_home"
@@ -130,8 +145,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
+            android:background="@color/red_2">
 
             <TextView
                 style="@style/fonte_padrao"
@@ -139,6 +153,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/foot_inicio"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -147,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/foot_rest"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -155,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/foot_perfil"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
         </LinearLayout>

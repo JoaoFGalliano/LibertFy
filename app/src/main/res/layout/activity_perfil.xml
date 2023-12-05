@@ -7,11 +7,13 @@
     tools:context=".Perfil">
 
 
-    <LinearLayout style="@style/layout_vertical"
+    <LinearLayout
+        style="@style/layout_vertical"
         tools:ignore="MissingConstraints">
 
         <LinearLayout
             style="@style/layout_vertical"
+            android:background="@color/red_2"
             android:orientation="horizontal">
 
             <TextView
@@ -19,19 +21,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/foot_perfil"></TextView>
+                android:text="@string/foot_perfil"
+                android:textColor="@color/white"></TextView>
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/foto">
-            </ImageView>
+                android:src="@drawable/foto"></ImageView>
         </LinearLayout>
 
 
@@ -39,48 +42,54 @@
             style="@style/fonte_padrao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nome do Cidadão"
             android:layout_marginTop="10dp"
-            ></TextView>
+            android:text="Joao"></TextView>
 
         <TextView
             style="@style/fonte_padrao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nascimento"
             android:layout_marginTop="10dp"
-            ></TextView>
+            android:text="27-08-1996"></TextView>
+
         <TextView
             style="@style/fonte_padrao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gênero"
             android:layout_marginTop="10dp"
-            ></TextView>
+            android:text="Neutro"></TextView>
+
         <TextView
             style="@style/fonte_padrao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Email"
             android:layout_marginTop="10dp"
+            android:text="gallianojoao@gmail.com "
+            android:layout_marginBottom="202dp"
             ></TextView>
+
+
         <TextView
-            style="@style/fonte_padrao"
+            android:id="@+id/tvComentario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="telefone"
             android:layout_marginTop="10dp"
-            ></TextView>
+            android:fontFamily="@font/poppins_reg"
+            android:textSize="20sp"
+            android:visibility="invisible"></TextView>
+
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="5dp">
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/red_2">
 
             <ImageView
                 android:id="@+id/bt_home"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/home" />
 
@@ -95,15 +104,16 @@
                 android:id="@+id/bt_perfil"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/perfil" />
         </LinearLayout>
 
         <LinearLayout
+            android:background="@color/red_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
+            >
 
             <TextView
                 style="@style/fonte_padrao"
@@ -111,7 +121,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/foot_inicio"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
 
             <TextView
                 style="@style/fonte_padrao"
@@ -119,7 +131,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/foot_rest"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
 
             <TextView
                 style="@style/fonte_padrao"
@@ -127,9 +141,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/foot_perfil"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                />
 
         </LinearLayout>
+
     </LinearLayout>
 
 

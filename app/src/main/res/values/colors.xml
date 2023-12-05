@@ -11,6 +11,7 @@
     <color name="cinza">#F2F2F2</color>
     <color name="vd_claro">#8EC380</color>
     <color name="amarelo">#EBEF78</color>
+    <color name="amarelo_2">#FFEB3B</color>
     <color name="cinza_claro">#A2A29F</color>
     <color name="cinza_busca">#995F5E61</color>
 </resources>

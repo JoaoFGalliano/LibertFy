@@ -10,54 +10,83 @@
         style="@style/layout_vertical"
         tools:ignore="MissingConstraints">
 
+        <LinearLayout
+            style="@style/layout_vertical"
+            android:background="@color/red_2"
+            android:orientation="horizontal">
+
             <TextView
                 style="@style/fonte_padrao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/foot_rest">
-            </TextView>
+                android:textColor="@color/white"
+                android:text="@string/foot_rest"></TextView>
 
-        <LinearLayout
-            style="@style/layout_vertical">
+        </LinearLayout>
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:src="@drawable/logo_libert"
+            android:layout_marginBottom="20dp"
+            >
+        </ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/fonte_padrao"
+            android:textSize="25sp"
+            android:text="Escolha Um Restaurante">
+        </TextView>
+
+
+        <LinearLayout style="@style/layout_vertical">
+
             <LinearLayout
-                android:layout_marginTop="20dp"
                 android:id="@+id/tanka"
-                android:background="@color/amarelo"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/border"
                 android:clickable="true"
-                android:focusable="true"
-                >
+                android:focusable="true">
+
                 <ImageView
                     android:layout_width="70dp"
-                   android:layout_height="100dp"
+                    android:layout_height="100dp"
                     android:layout_weight="1"
+
                     android:src="@drawable/salao_tanka"></ImageView>
+
                 <TextView
                     style="@style/fonte_padrao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="Tanka">
-                </TextView>
+                    android:text="Tanka"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"></TextView>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:id="@+id/tanka2"
-                android:background="@color/amarelo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border">
 
                 <ImageView
                     android:layout_width="60dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
-                    android:src="@drawable/mugui">
-                </ImageView>
+                    android:src="@drawable/mugui"></ImageView>
 
                 <TextView
                     style="@style/fonte_padrao"
@@ -65,45 +94,51 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="Mugui">
-                </TextView>
+                    android:textColor="@color/white"
+                    android:text="Mugui"
+                    android:textSize="20sp"></TextView>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="20dp"
+
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:id="@+id/tanka3"
-                android:background="@color/amarelo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border">
+
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="100dp"
                     android:layout_weight="1"
                     android:src="@drawable/tako"></ImageView>
+
                 <TextView
                     style="@style/fonte_padrao"
+                    android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_weight="1"
-                    android:textSize="20sp"
-                    android:text="Tako">
-                </TextView>
+                    android:text="Tako"
+                    android:textSize="20sp"></TextView>
             </LinearLayout>
         </LinearLayout>
 
 
         <LinearLayout
+            android:background="@color/red_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_marginBottom="5dp">
+            android:layout_marginTop="27dp">
 
             <ImageView
                 android:id="@+id/bt_home"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginRight="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/home" />
 
@@ -118,15 +153,16 @@
                 android:id="@+id/bt_perfil"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
                 android:layout_weight="1"
                 android:src="@drawable/perfil" />
         </LinearLayout>
 
         <LinearLayout
+            android:background="@color/red_2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp">
+            android:layout_height="match_parent"
+            >
 
             <TextView
                 style="@style/fonte_padrao"
@@ -134,6 +170,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/foot_inicio"
+                android:textColor="@color/white"
                 android:textSize="16sp" />
 
             <TextView
@@ -141,14 +178,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/white"
                 android:text="@string/foot_rest"
                 android:textSize="16sp" />
 
             <TextView
                 style="@style/fonte_padrao"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:textColor="@color/white"
                 android:text="@string/foot_perfil"
                 android:textSize="16sp" />
         </LinearLayout>
